@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Vacation Quote Generator</title>
+<style>
+  body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  #quote {
+    margin: 2rem 0;
+    font-size: 1.25rem;
+    min-height: 3rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Christmas Vacation Quote Generator</h1>
+
+<div id="quote">Press the button for a quote.</div>
+
+<button id="newQuote">Random Quote</button>
+
+<script>
+const quotes = [
+  "Merry Christmas. Merry Christmas. Kiss my ass.",
+  "We're gonna have the hap-hap-happiest Christmas!",
+  "Shitter's full!",
+  "It's a beaut, Clark!",
+  "The little lights aren't twinkling.",
+  "I don't know, Margo.",
+  "Fixed the newel post!",
+  "Bend over and I'll show you.",
+  "Save the neck for me, Clark.",
+  "You serious, Clark?"
+];
+
+const quoteEl = document.getElementById("quote");
+const button = document.getElementById("newQuote");
+
+button.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  quoteEl.textContent = quotes[randomIndex];
+});
+</script>
+
+</body>
+</html>
